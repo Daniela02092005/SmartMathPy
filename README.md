@@ -12,8 +12,8 @@ El objetivo es reforzar la lógica matemática mientras aprendo Python, y luego 
     Cálculo/
     Estadística/
    ```
-3.Desarrollar algoritmos simples que más adelante serán integrados en una app Django.
-4.Crear un portafolio que muestre mi evolución como programadora backend.
+3. Desarrollar algoritmos simples que más adelante serán integrados en una app Django.
+4. Crear un portafolio que muestre mi evolución como programadora backend.
 
 ## Estructura del repositorio
 ```
