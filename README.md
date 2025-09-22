@@ -11,7 +11,7 @@ El objetivo es reforzar la lógica matemática mientras aprendo Python, y luego 
     Estadística/
 3.Desarrollar algoritmos simples que más adelante serán integrados en una app Django.
 4.Crear un portafolio que muestre mi evolución como programadora backend.
-
+´´´
 SmartMathPy/
 │
 ├── Álgebra/
@@ -27,7 +27,7 @@ SmartMathPy/
 │   └── ...
 │
 └── README.md  
-
+´´´
 **Migración a Django**
 
 Después de completar la fase de algoritmos en Python, la idea es llevarlos a una aplicación web en Django llamada **SmartMath-App**.
