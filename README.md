@@ -7,9 +7,11 @@ El objetivo es reforzar la lógica matemática mientras aprendo Python, y luego 
 
 1. Aprender Python paso a paso usando problemas de matemáticas.
 2. Organizar los ejercicios en tres módulos principales:
+   ```
     Álgebra/
     Cálculo/
     Estadística/
+   ```
 3.Desarrollar algoritmos simples que más adelante serán integrados en una app Django.
 4.Crear un portafolio que muestre mi evolución como programadora backend.
 
