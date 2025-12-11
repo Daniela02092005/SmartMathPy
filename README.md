@@ -1,50 +1,55 @@
 # SmartMathPy
 
-**SmartMathPy** es un repositorio de ejercicios en Python aplicados a álgebra, cálculo y estadística.
-El objetivo es reforzar la lógica matemática mientras aprendo Python, y luego migrar estos algoritmos a una aplicación web en Django.
+**SmartMathPy** es un repositorio de ejercicios en Python aplicados a álgebra, cálculo, estadística y simulaciones.
+El objetivo es reforzar la lógica matemática mientras aprendo Python.
 
 ## Objetivos del proyecto
 
-1. Aprender Python paso a paso usando problemas de matemáticas.
-2. Organizar los ejercicios en tres módulos principales:
+1. Aprender Python creando algoritmos matemáticos sin librerías externas sino con programación modular.
+2. Organizar los ejercicios en seis módulos principales:
    ```
+    utils/
     Álgebra/
     Cálculo/
     Estadística/
+    Simulaciones/
+    test/
    ```
-3. Desarrollar algoritmos simples que más adelante serán integrados en una app Django.
-4. Crear un portafolio que muestre mi evolución como programadora backend.
+3. Crear un portafolio que muestre mi evolución como programadora backend.
 
 ## Estructura del repositorio
 ```
 SmartMathPy/
+|
+├── utils/
+|   ├── algoritmos_generales.md
+|   └── ...
 │
 ├── Álgebra/
-│   ├── ejercicios.md
+│   ├── algoritmos.md
 │   └── ...
 │
 ├── Cálculo/
-│   ├── ejercicios.md
+│   ├── algoritmos.md
 │   └── ...
 │
 ├── Estadística/
-│   ├── ejercicios.md
+│   ├── algoritmos.md
 │   └── ...
+|
+├── Simulaciones/
+|   ├── simulaciones.md
+|   └── ...
 │
+├── test/
+|   ├── pruebas.md
+|   └── ...
+|
 └── README.md  
 ```
-## Migración a Django
-
-Después de completar la fase de algoritmos en Python, la idea es llevarlos a una aplicación web en Django llamada **SmartMath-App**.
-Cada carpeta se convertirá en un módulo de la aplicación:
-
-    Álgebra → vistas para resolver ecuaciones, factorizaciones, operaciones con matrices.
-    Cálculo → derivadas, integrales, límites y aproximaciones numéricas.
-    Estadística → análisis de datos: media, varianza, regresiones simples.
 
 ## Ruta de aprendizaje
 
-1. Aprender sintaxis básica de Python con ejercicios de W3Schools.
+1. Aprender sintaxis básica de Python con W3Schools.
 2. Aplicar cada tema aprendido a un algoritmo de matemáticas.
 3. Organizar los algoritmos en este repo.
-4. Migrar a Django y construir la aplicación web **SmartMath-App**.
