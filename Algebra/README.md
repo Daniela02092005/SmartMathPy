@@ -7,8 +7,6 @@ El objetivo es reforzar la lógica matemática con ejercicios de operaciones bá
 
 ## 📑 Ejercicios
 
-- [ ] Operaciones básicas con números (suma, resta, multiplicación, división)  
-- [ ] Potencias y raíces  
 - [ ] Resolver ecuaciones de primer grado  
 - [ ] Resolver ecuaciones de segundo grado  
 - [ ] Operaciones con matrices (suma, multiplicación)  

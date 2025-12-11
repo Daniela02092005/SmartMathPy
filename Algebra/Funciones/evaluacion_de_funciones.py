@@ -1,15 +1,9 @@
+from utils import convertir_valores
+
 funcion = input("Ingrese la función a evaluar en términos de a con espacios entre cada término: ").split()
 
 cantidad = int(input("Ingrese la cantidad de imágenes que desea encontrar: "))
 
-def convertir_valores(valor):
-    if "/" in valor:
-        numerador, denominador = valor.split("/")
-        return int(numerador) / int(denominador)
-    elif "." in valor:
-        return float(valor)
-    else:
-        return int(valor)
     
 def evaluar_funcion(f, d):
     print(f, d)
