@@ -1,31 +1,90 @@
-class operaciones_basicas():
-    def suma(self, *elementos): # *elementos = argumento arbitrario en tupla, porque no sé cuantos argumentos le pasarán a la función
-        lista = list(elementos) # Convierto la tupla en lista
+from convertir_valores import convertir_valores, convertir_a_fraccion
 
-        tamano = len(lista) # Reviso el tamaño de la lista
-        suma = []
+'''
+    Este módulo contiene implementaciones elementales de operaciones aritméticas utilizando técnicas imperativas básicas. 
+    Su propósito es didáctico; el resto del proyecto utiliza los operadores aritméticos nativos de Python.
+'''
 
-        for t in range(tamano):
-            indice = lista[t]
-            for i in indice:
-                suma.append(i)
-        return len(suma)
-    
-    def resta(self, *elementos): # *elementos = argumento arbitrario en tupla, porque no sé cuantos argumentos le pasarán a la función
-        lista = list(elementos) # Convierto la tupla en lista
+def multiplicacion(a, b):
+    resultado = 0
+    for i in range(b):
+        resultado = resultado + a
+    return resultado
 
-        primer_valor = float(lista[0]) # Guardo el primer valor de la lista
-        resta = [] 
+def suma(a, b):
+    sumando1 = convertir_valores(a)
+    sumando2 = convertir_valores(b)
 
-        for p in primer_valor:
-            resta.append(p) #Relleno la lista con ese valor
-        
-        tamano = len(lista)
+    if isinstance(sumando1, int) and isinstance(sumando2, int): #isinstance verifica que el objeto sea del timpo que se está preguntando
         auxiliar = []
+        for i in range(sumando1):
+            auxiliar.append(i)
+        for i in range(sumando2):
+            auxiliar.append(i)
+        return len(auxiliar)
+    
+    else:
+        if isinstance(sumando1, float) and isinstance(sumando2, float):
+            fraccion1 = convertir_a_fraccion(str(sumando1))
+            fraccion2 = convertir_a_fraccion(str(sumando2))
 
-        for t in range(1, tamano):
-            auxiliar.append(lista[t])
-        resultado = self.suma(auxiliar)
+            numerador1, denominador1 = fraccion1
+            numerador2, denominador2 = fraccion2
 
-        for r in resultado:
-            resta.pop()
+            if denominador1 == denominador2:
+
+                a = suma(numerador1, numerador2)
+                b = denominador2
+
+                return a / b
+
+            else:
+                a = multiplicacion(numerador1, denominador2)
+                b = multiplicacion(numerador2, denominador1)
+                c = multiplicacion(denominador1, denominador2)
+
+                ab = suma(a, b)
+
+                return ab / c
+
+def resta(a, b):
+    minuendo = convertir_valores(a)
+    sustraendo = convertir_valores(b)
+
+    if isinstance(minuendo, int) and isinstance(sustraendo, int): 
+        auxiliar = []
+        for i in range(minuendo):
+            auxiliar.append(i)
+        for i in range(sustraendo):
+            auxiliar.pop()
+        return len(auxiliar)
+    
+    else:
+        if isinstance(minuendo, float) and isinstance(sustraendo, float):
+            fraccion1 = convertir_a_fraccion(str(minuendo))
+            fraccion2 = convertir_a_fraccion(str(sustraendo))
+
+            numerador1, denominador1 = fraccion1
+            numerador2, denominador2 = fraccion2
+
+            if denominador1 == denominador2:
+
+                a = resta(numerador1, numerador2)
+                b = denominador2
+
+                return a / b
+
+            else:
+                a = multiplicacion(numerador1, denominador2)
+                b = multiplicacion(numerador2, denominador1)
+                c = multiplicacion(denominador1, denominador2)
+
+                ab = resta(a, b)
+
+                return ab / c    
+
+def exponente(a, b):
+    resultado = 1
+    for i in range(b):
+        resultado = multiplicacion(resultado, a)
+    return resultado
