@@ -47,3 +47,51 @@ def diferencia_conjuntista(A: set, B: set):
         raise ValueError("La diferencia conjuntista es 0")
     
     return set(resultado)
+
+def diferencia_simetrica(A: set, B: set):
+    """
+    The function `diferencia_simetrica` calculates the symmetric difference between two sets A and B by
+    finding elements that are only in one of the sets.
+    """
+
+    try:
+        primera_parte = diferencia_conjuntista(A, B)
+    except:
+        primera_parte = set() #Dado el caso de que se ejecute el error en la función diferencia_conjuntista
+
+    try:
+        segunda_parte = diferencia_conjuntista(B, A)
+    except:
+        segunda_parte = set() #Dado el caso que se ejecute el error en la funcion diferencia_conjuntista
+
+    resultado = union(primera_parte, segunda_parte)
+
+    return resultado
+
+def contenido(A: set, B: set):
+    """
+    The function checks if all elements in set A are also present in set B and returns True if they are,
+    otherwise False.
+    """
+    resultado = True
+
+    for elemento in A:
+        if elemento in B:
+            resultado = True
+        else:
+            resultado = False
+            break
+
+    return resultado
+
+def contenido_estrictamente(A: set, B: set):
+    """
+    The function `contenido_estrictamente` checks if set A is strictly contained in set B.
+    """
+    resultado = contenido(A, B)
+    if resultado == True and A != B:
+        resultado = True
+    else:
+        resultado = False
+
+    return resultado
