@@ -95,3 +95,7 @@ def contenido_estrictamente(A: set, B: set):
         resultado = False
 
     return resultado
+
+def complemento(R: set, A: set):
+    resultado = diferencia_conjuntista(R, A)
+    return resultado
