@@ -1,3 +1,20 @@
+def union(A: set, B: set):
+    """
+    The function `union` takes two sets as input and returns a new set containing all unique elements
+    from both input sets.
+    """
+    resultado = []
+
+    for elemento in A:
+        resultado.append(elemento)
+    
+    for elemento in B:
+        if elemento not in resultado:
+            resultado.append(elemento)
+
+    return set(resultado)
+
+
 def interseccion(A: set, B: set):
     """
     The function `interseccion` takes two sets A and B as input and returns the intersection of elements
