@@ -28,7 +28,7 @@ def interseccion(A: set, B: set):
             resultado.append(elemento)
 
     if not resultado:
-        raise ValueError("No existe intersección entre los conjuntos A y B")
+        raise ValueError("A y B son disjuntos") #Disjuntos son los conjuntos que su intersección es el conjunto vacío
 
     return set(resultado)
 
