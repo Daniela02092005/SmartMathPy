@@ -102,13 +102,16 @@ def complemento(R: set, A: set):
 
 def conjunto_de_partes(A: set):
     vacio = tuple()
-    cardinalA = len(A)
-    cardinalPA = 2 ** cardinalA
 
     conjunto_partes = set()
     conjunto_partes.add(vacio)
 
-    subconjunto = tuple()
-
     for elemento in A:
-        pass
+        copia = conjunto_partes.copy()
+        for subconjunto in copia:
+            copia_subconjunto = list(subconjunto)
+            copia_subconjunto.append(elemento)
+            nuevo_subconjunto = tuple(copia_subconjunto)
+            conjunto_partes.add(nuevo_subconjunto)
+
+    return conjunto_partes
