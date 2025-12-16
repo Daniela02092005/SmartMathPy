@@ -99,3 +99,16 @@ def contenido_estrictamente(A: set, B: set):
 def complemento(R: set, A: set):
     resultado = diferencia_conjuntista(R, A)
     return resultado
+
+def conjunto_de_partes(A: set):
+    vacio = tuple()
+    cardinalA = len(A)
+    cardinalPA = 2 ** cardinalA
+
+    conjunto_partes = set()
+    conjunto_partes.add(vacio)
+
+    subconjunto = tuple()
+
+    for elemento in A:
+        pass
