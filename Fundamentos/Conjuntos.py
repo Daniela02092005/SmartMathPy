@@ -97,10 +97,17 @@ def contenido_estrictamente(A: set, B: set):
     return resultado
 
 def complemento(R: set, A: set):
+    """
+    The function `complemento` takes two sets `R` and `A`, and returns the set difference between `R`
+    and `A`.
+    """
     resultado = diferencia_conjuntista(R, A)
     return resultado
 
 def conjunto_de_partes(A: set):
+    """
+    The function creates the power set of a given set A.
+    """
     vacio = tuple()
 
     conjunto_partes = set()
