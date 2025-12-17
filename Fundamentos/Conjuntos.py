@@ -122,3 +122,19 @@ def conjunto_de_partes(A: set):
             conjunto_partes.add(nuevo_subconjunto)
 
     return conjunto_partes
+
+def producto_cartesiano(A: set, B: set):
+    """
+    The function `producto_cartesiano` takes two sets as input and returns the Cartesian product of the
+    two sets as a set of tuples.
+    """
+    resultado = set()
+
+    for elementoA in A:
+        for elementoB in B:
+            a = elementoA
+            b = elementoB
+            par_ordenado = (a,b)
+            resultado.add(par_ordenado)
+
+    return resultado
