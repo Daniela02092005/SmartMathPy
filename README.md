@@ -6,7 +6,7 @@ El objetivo es reforzar la lógica matemática mientras aprendo Python.
 ## Objetivos del proyecto
 
 1. Aprender Python creando algoritmos matemáticos sin librerías externas sino con programación modular.
-2. Organizar los ejercicios en siete módulos principales:
+2. Organizar los ejercicios en seis módulos principales:
    ```
     utils/
     Álgebra/
