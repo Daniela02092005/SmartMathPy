@@ -2,9 +2,9 @@
 
 En esta carpeta están los algoritmos de **cálculo** implementados en Python.  
 
-El objetivo es reforzar la lógica matemática con ejercicios de límites, derivadas, integrales y aproximaciones numéricas.  
+El objetivo es reforzar la lógica matemática con algoritmos de cálculo diferencial, integral y vectorial.  
 
-## 📑 Ejercicios
+## 📑 Algoritmos 
 
 - [ ] Cálculo de límites simples  
 - [ ] Derivadas de polinomios  
@@ -17,7 +17,7 @@ El objetivo es reforzar la lógica matemática con ejercicios de límites, deriv
 
 ## 🎯 Objetivo
 
-Cada ejercicio debe:  
+Cada algoritmo debe:  
 
 1. Usar conceptos de Python que voy aprendiendo.  
 2. Mostrar paso a paso la lógica detrás del cálculo.  
