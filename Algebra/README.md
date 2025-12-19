@@ -1,11 +1,11 @@
 # 📘 Álgebra
 
 En esta carpeta están los algoritmos de **álgebra** implementados en Python.  
-El objetivo es reforzar la lógica matemática con ejercicios de operaciones básicas, ecuaciones y matrices.  
+El objetivo es reforzar la lógica matemática con algoritmosde álgebra.  
 
 ---
 
-## 📑 Ejercicios
+## 📑 Algoritmos 
 
 - [ ] Resolver ecuaciones de primer grado  
 - [ ] Resolver ecuaciones de segundo grado  
@@ -18,7 +18,7 @@ El objetivo es reforzar la lógica matemática con ejercicios de operaciones bá
 
 ## 🎯 Objetivo
 
-Cada ejercicio debe:  
+Cada algoritmo debe:  
 
 1. Usar conceptos de Python que voy aprendiendo.  
 2. Mostrar la lógica paso a paso.  
