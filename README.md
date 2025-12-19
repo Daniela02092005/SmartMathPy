@@ -1,6 +1,6 @@
 # SmartMathPy
 
-**SmartMathPy** es un repositorio de ejercicios en Python aplicados a álgebra, cálculo, estadística y simulaciones.
+**SmartMathPy** es un repositorio de algoritmos en Python de álgebra, cálculo y estadística.
 El objetivo es reforzar la lógica matemática mientras aprendo Python.
 
 ## Objetivos del proyecto
@@ -13,7 +13,6 @@ El objetivo es reforzar la lógica matemática mientras aprendo Python.
     Cálculo/
     Estadística/
     Fundamentos/
-    Simulaciones/
     test/
    ```
 3. Crear un portafolio que muestre mi evolución como programadora backend.
@@ -41,10 +40,6 @@ SmartMathPy/
 ├── Fundamentos/
 │   ├── algoritmos.md
 │   └── ...
-|
-├── Simulaciones/
-|   ├── simulaciones.md
-|   └── ...
 │
 ├── test/
 |   ├── pruebas.md
