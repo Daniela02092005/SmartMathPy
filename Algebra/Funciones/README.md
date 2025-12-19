@@ -11,7 +11,7 @@ El contenido está basado en el curso de *Funciones* del profesor Alex, disponib
 - Conceptos básicos de funciones  
 - Tipos de funciones  
 - Inyectividad, sobreyectividad y biyectividad  
-- Otros ejercicios implementados en Python  
+- Otros algoritmos implementados en Python  
 
 ---
 
