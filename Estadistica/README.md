@@ -2,11 +2,11 @@
 
 En esta carpeta están los algoritmos de **estadística** implementados en Python.  
 
-El objetivo es reforzar la lógica matemática con ejercicios de medidas descriptivas, probabilidad y distribuciones.  
+El objetivo es reforzar la lógica matemática con algoritmos de estadística.  
 
 ---
 
-## 📑 Ejercicios  
+## 📑 Algoritmos  
 
 - [ ] Cálculo de media, mediana y moda  
 - [ ] Varianza y desviación estándar  
@@ -21,8 +21,9 @@ El objetivo es reforzar la lógica matemática con ejercicios de medidas descrip
 
 ## 🎯 Objetivo  
 
-Cada ejercicio debe:  
+Cada algoritmo debe:  
 
 1. Usar conceptos de Python que voy aprendiendo.  
 2. Mostrar paso a paso la lógica detrás del cálculo estadístico.  
 3. Guardarse en un archivo `.py` dentro de esta carpeta.  
+
