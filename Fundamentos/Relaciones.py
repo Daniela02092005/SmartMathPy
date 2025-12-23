@@ -1,4 +1,4 @@
-from Conjuntos import producto_cartesiano
+from Conjuntos import producto_cartesiano, contenido, interseccion
 
 def diagonal(A: set):
     """
@@ -48,3 +48,42 @@ def inversa(A: set, B: set):
         resultado.add(nuevo_par)
     
     return resultado
+
+def reflexiva(Diagonal: set, R: set):
+    """
+    The function checks if a relation R is reflexive based on the elements in the diagonal set.
+    """
+    if contenido(Diagonal, R) == True:
+        return True
+    else:
+        return False
+    
+def simetrica(Inversa: set, R: set):
+    """
+    The function `simetrica` checks if two sets are equal and returns True if they are, otherwise
+    returns False.
+    """
+    if Inversa == R:
+        return True
+    else:
+        return False
+    
+def transitiva(Compuesta: set, R: set):
+    """
+    The function `transitiva` checks if a set `Compuesta` contains all elements of another set `R`.
+    """
+    if contenido(Compuesta, R) == True:
+        return True
+    else:
+        return False
+    
+def antisimetrica(R: set, Inversa: set, Diagonal: set):
+    """
+    The function checks if the intersection of two sets is contained within a third set.
+    """
+    a = interseccion(R, Inversa)
+    
+    if contenido(a, Diagonal):
+        return True
+    else:
+        return False
