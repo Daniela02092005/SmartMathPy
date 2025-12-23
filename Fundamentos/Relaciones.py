@@ -21,3 +21,17 @@ def compuesta(A: set, B: set, C: set):
                 resultado.add(par_ordenado)
     
     return resultado
+
+def inversa(A: set, B: set):
+    """
+    The function inversa takes two sets A and B, computes the Cartesian product of A and B, and returns
+    a new set with the pairs reversed.
+    """
+    original = producto_cartesiano(A, B)
+    resultado = set()
+
+    for par in original:
+        nuevo_par = (par[1], par[0])
+        resultado.add(nuevo_par)
+    
+    return resultado
