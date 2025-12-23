@@ -49,41 +49,72 @@ def inversa(A: set, B: set):
     
     return resultado
 
-def reflexiva(Diagonal: set, R: set):
+def inversa_relacion(R: set):
+    resultado = set()
+
+    for a, b in R:
+        inversa = (b,a)
+        resultado.add(inversa)
+
+    return resultado
+
+def reflexiva(A: set, R: set):
     """
     The function checks if a relation R is reflexive based on the elements in the diagonal set.
     """
-    if contenido(Diagonal, R) == True:
+    Diagonal = diagonal(A)
+
+    if contenido(Diagonal, R):
         return True
     else:
         return False
     
-def simetrica(Inversa: set, R: set):
+def simetrica(R: set):
     """
     The function `simetrica` checks if two sets are equal and returns True if they are, otherwise
     returns False.
     """
+    Inversa = inversa_relacion(R)
+
     if Inversa == R:
         return True
     else:
         return False
     
-def transitiva(Compuesta: set, R: set):
+def transitiva(R: set):
     """
     The function `transitiva` checks if a set `Compuesta` contains all elements of another set `R`.
     """
-    if contenido(Compuesta, R) == True:
+    Compuesta = set()
+    for (a, b) in R:
+        for (c, d) in R:
+            if b == c:
+                par_ordenado = (a, d)
+                Compuesta.add(par_ordenado)
+
+    if contenido(Compuesta, R):
         return True
     else:
         return False
     
-def antisimetrica(R: set, Inversa: set, Diagonal: set):
+def antisimetrica(R: set, A: set):
     """
     The function checks if the intersection of two sets is contained within a third set.
     """
+    Inversa = inversa_relacion(R)
     a = interseccion(R, Inversa)
-    
+    Diagonal = diagonal(A)
+
     if contenido(a, Diagonal):
         return True
     else:
+        return False
+    
+def equivalencia(A: set, R: set):
+    """
+    The function checks if a relation R on set A is reflexive, symmetric, and transitive.
+    """
+    if reflexiva(A, R) and simetrica(R) and transitiva(R):
+        return True
+    else: 
         return False
