@@ -1,5 +1,18 @@
 from Conjuntos import producto_cartesiano
 
+def diagonal(A: set):
+    """
+    The function `diagonal` takes a set as input and returns a set of tuples where each tuple contains
+    an element from the input set repeated twice.
+    """
+    resultado = set()
+
+    for a in A:
+        par_ordenado = (a, a)
+        resultado.add(par_ordenado)
+
+    return resultado
+
 def compuesta(A: set, B: set, C: set):
     """
     The function `compuesta` takes three sets A, B, and C, computes the Cartesian products of A and B,
