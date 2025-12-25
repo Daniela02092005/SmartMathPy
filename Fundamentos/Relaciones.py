@@ -118,3 +118,16 @@ def equivalencia(A: set, R: set):
         return True
     else: 
         return False
+    
+def clase_equivalencia(R: set, A: set, x):
+    """
+    The function `clase_equivalencia` takes a relation R, a set A, and an element x, and returns a set
+    of elements from A that are related to x in R.
+    """
+    resultado = set()
+
+    for elemento in A:
+        if (elemento, x) in R:
+            resultado.add(elemento)
+    
+    return resultado
