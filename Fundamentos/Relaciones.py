@@ -141,3 +141,12 @@ def disjuntos_por_pares(A: set, B: set):
         return True
     else:
         return False
+    
+def relacion_de_orden(R: set, A: set):
+    """
+    The function checks if a relation R on set A is reflexive, antisymmetric, and transitive.
+    """
+    if reflexiva(A, R) and antisimetrica(R, A) and transitiva(R):
+        return True
+    else: 
+        return False
