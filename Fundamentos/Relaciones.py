@@ -131,3 +131,13 @@ def clase_equivalencia(R: set, A: set, x):
             resultado.add(elemento)
     
     return resultado
+
+def disjuntos_por_pares(A: set, B: set):
+    """
+    The function `disjuntos_por_pares` checks if two sets A and B are disjoint by pairs.
+    """
+    i = interseccion(A, B)
+    if A !=B and i == set():
+        return True
+    else:
+        return False
