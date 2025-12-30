@@ -150,3 +150,14 @@ def relacion_de_orden(R: set, A: set):
         return True
     else: 
         return False
+    
+def comparable(P: set, a, b):
+    """
+    The function `comparable` determines whether two elements are comparable based on a given set of
+    pairs.
+    """
+        
+    if (a, b) in P or (b, a) in P:
+        return "Comparables"
+    else:
+        return "Incomparables"
