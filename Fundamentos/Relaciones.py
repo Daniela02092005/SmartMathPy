@@ -161,3 +161,20 @@ def comparable(P: set, a, b):
         return "Comparables"
     else:
         return "Incomparables"
+    
+def orden_total(P: set, A: set):
+    """
+    The function `orden_total` checks if a given set of pairs satisfies the total order property.
+    """
+
+    resultado = True
+
+    for a in A:
+        for b in A:
+            if (a, b) in P or (b, a) in P:
+                continue
+            else:
+                resultado = False
+                break
+
+    return resultado
