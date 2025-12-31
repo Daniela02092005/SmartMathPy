@@ -178,3 +178,29 @@ def orden_total(P: set, A: set):
                 break
 
     return resultado
+
+def minmax(P: set, A: set):
+    """
+    The function minmax takes two sets P and A as input, and returns the minimal and maximal elements of
+    set A based on the relation defined in set P.
+    """
+    discard = set()
+
+    for m in A:
+        for x in A:
+            if (m, x) not in P:
+                discard.add(m)
+                break
+    
+    minimal = set(A - discard)
+    discard.clear()
+
+    for n in A:
+        for x in A:
+            if (x, n) not in P:
+                discard.add(n)
+                break
+
+    maximal = set(A - discard)
+    
+    return minimal, maximal
