@@ -233,3 +233,29 @@ def cotas(P: set, A: set, B: set):
     upper_bound = set(A - discard)
 
     return lower_bound, upper_bound
+
+def extremos(P: set,lower_bound: set, upper_bound: set):
+    """
+    The function `extremos` takes three sets as input (P, lower_bound, upper_bound) and returns two sets
+    containing elements that are the lower and upper bounds of P.
+    """
+    discard = set()
+
+    for m in upper_bound:
+        for x in upper_bound:
+            if (m, x) not in P:
+                discard.add(m)
+                break
+    
+    sup = set(upper_bound - discard)
+    discard.clear()
+
+    for n in lower_bound:
+        for x in lower_bound:
+            if (x, n) not in P:
+                discard.add(n)
+                break
+
+    inf = set(lower_bound - discard)
+
+    return inf, sup
