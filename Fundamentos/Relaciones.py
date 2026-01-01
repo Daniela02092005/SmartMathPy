@@ -204,3 +204,32 @@ def minmax(P: set, A: set):
     maximal = set(A - discard)
     
     return minimal, maximal
+
+def cotas(P: set, A: set, B: set):
+    """
+    The function `cotas` calculates the lower and upper bounds of a set based on two other sets and a
+    given relation.
+    """
+
+    discard = set()
+    lower_bound = set()
+    upper_bound = set()
+
+    for a in A:
+        for b in B:
+            if (a, b) not in P:
+                discard.add(a)
+                break
+    
+    lower_bound = set(A - discard) #Cota inferior = lower bound
+    discard.clear()
+
+    for a in A:
+        for b in B:
+            if (b, a) not in P:
+                discard.add(a)
+                break
+    
+    upper_bound = set(A - discard)
+
+    return lower_bound, upper_bound
