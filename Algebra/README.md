@@ -1,7 +1,7 @@
 # 📘 Álgebra
 
 En esta carpeta están los algoritmos de **álgebra** implementados en Python.  
-El objetivo es reforzar la lógica matemática con algoritmosde álgebra.  
+El objetivo es reforzar la lógica matemática con algoritmos de álgebra.  
 
 ---
 
