@@ -77,14 +77,15 @@ def reflexive(A: set, R: set):
     else:
         return False
     
-def simetrica(R: set):
+def symmetric(R: set):
     """
-    The function `simetrica` checks if two sets are equal and returns True if they are, otherwise
-    returns False.
+    The `symmetric` function checks whether two sets are equal and returns True if they are, otherwise it returns False. 
+    This is based on Theorem 41, clause b:
+        If R is a relation on A, then: R is symmetric if and only if R^-1 = R.
     """
-    Inversa = inverse_relation(R)
+    Inverse = inverse_relation(R)
 
-    if Inversa == R:
+    if Inverse == R:
         return True
     else:
         return False
@@ -122,7 +123,7 @@ def equivalencia(A: set, R: set):
     """
     The function checks if a relation R on set A is reflexive, symmetric, and transitive.
     """
-    if reflexive(A, R) and simetrica(R) and transitiva(R):
+    if reflexive(A, R) and symmetric(R) and transitiva(R):
         return True
     else: 
         return False
