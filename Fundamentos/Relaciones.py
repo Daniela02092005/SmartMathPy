@@ -122,9 +122,10 @@ def antisymmetric(R: set, A: set):
     else:
         return False
     
-def equivalencia(A: set, R: set):
+def equivalence(A: set, R: set):
     """
-    The function checks if a relation R on set A is reflexive, symmetric, and transitive.
+    The equivalence function checks whether a relation R in set A is reflexive, symmetric, and transitive. This is based on the definition:
+        An equivalence relation in a set is a relation that satisfies three fundamental properties: reflexivity, symmetry, and transitivity.
     """
     if reflexive(A, R) and symmetric(R) and transitive(R):
         return True
