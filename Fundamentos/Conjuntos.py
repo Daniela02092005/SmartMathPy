@@ -82,17 +82,21 @@ def contained(A: set, B: set):
 
     return result
 
-def contenido_estrictamente(A: set, B: set):
+def strictly_contained(A: set, B: set):
     """
-    The function `contenido_estrictamente` checks if set A is strictly contained in set B.
+    The function `strictly_contained` checks whether set A is strictly contained in set B. Based on the definition:
+        If A and B are sets with A ⊆ B and A ≠ B, we say that A is strictly contained in B (or that A is a proper subset of B, or that B 
+        strictly contains A) and we write A ⊂ B; in symbols: A⊂B if and only if A⊆B and A≠B if and only if A⊆B and there exists such an x 
+        that x∈B and x∉A.
+        That is, A must be contained in B but they cannot be the same.
     """
-    resultado = contained(A, B)
-    if resultado == True and A != B:
-        resultado = True
+    result = contained(A, B)
+    if result == True and A != B:
+        result = True
     else:
-        resultado = False
+        result = False
 
-    return resultado
+    return result
 
 def complemento(R: set, A: set):
     """
