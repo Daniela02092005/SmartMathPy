@@ -90,18 +90,19 @@ def symmetric(R: set):
     else:
         return False
     
-def transitiva(R: set):
+def transitive(R: set):
     """
-    The function `transitiva` checks if a set `Compuesta` contains all elements of another set `R`.
+    The `transitive` function checks whether a set R contains the composition. This is based on Theorem 41, subsection c:
+        If R is a relation in A, then: R is transitive if and only if RoR⊆R.
     """
-    Compuesta = set()
+    composition = set()
     for (a, b) in R:
         for (c, d) in R:
             if b == c:
-                par_ordenado = (a, d)
-                Compuesta.add(par_ordenado)
+                ordered_pair = (a, d)
+                composition.add(ordered_pair)
 
-    if contained(Compuesta, R):
+    if contained(composition, R):
         return True
     else:
         return False
@@ -123,7 +124,7 @@ def equivalencia(A: set, R: set):
     """
     The function checks if a relation R on set A is reflexive, symmetric, and transitive.
     """
-    if reflexive(A, R) and symmetric(R) and transitiva(R):
+    if reflexive(A, R) and symmetric(R) and transitive(R):
         return True
     else: 
         return False
@@ -155,7 +156,7 @@ def relacion_de_orden(R: set, A: set):
     """
     The function checks if a relation R on set A is reflexive, antisymmetric, and transitive.
     """
-    if reflexive(A, R) and antisimetrica(R, A) and transitiva(R):
+    if reflexive(A, R) and antisimetrica(R, A) and transitive(R):
         return True
     else: 
         return False
