@@ -107,24 +107,27 @@ def complement(R: set, A: set):
     result = set_difference(R, A)
     return result
 
-def conjunto_de_partes(A: set):
+def power_set(A: set):
     """
-    The function creates the power set of a given set A.
+    The function creates the power set of a given set A, based on axiom 6 of the set of parts:
+        If A is any set, there exists a set whose elements are precisely all the subsets of A; this set is called the set of parts of A 
+        (or power set of A) and we denote it P(A).
+        Thus, if A is a set, x∈P(A) if and only if x⊆A.
     """
-    vacio = tuple()
+    empty = tuple()
 
-    conjunto_partes = set()
-    conjunto_partes.add(vacio)
+    power_set = set()
+    power_set.add(empty)
 
-    for elemento in A:
-        copia = conjunto_partes.copy()
-        for subconjunto in copia:
-            copia_subconjunto = list(subconjunto)
-            copia_subconjunto.append(elemento)
-            nuevo_subconjunto = tuple(copia_subconjunto)
-            conjunto_partes.add(nuevo_subconjunto)
+    for element in A:
+        copy = power_set.copy()
+        for subset in copy:
+            subset_copy = list(subset)
+            subset_copy.append(element)
+            new_subset = tuple(subset_copy)
+            power_set.add(new_subset)
 
-    return conjunto_partes
+    return power_set
 
 def producto_cartesiano(A: set, B: set):
     """
