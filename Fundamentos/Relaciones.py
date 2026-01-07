@@ -132,18 +132,20 @@ def equivalence(A: set, R: set):
     else: 
         return False
     
-def clase_equivalencia(R: set, A: set, x):
+def class_equivalence(R: set, A: set, x):
     """
-    The function `clase_equivalencia` takes a relation R, a set A, and an element x, and returns a set
-    of elements from A that are related to x in R.
+    The function `equivalence_class` takes a relation R, a set A, and an element x, and returns a set of elements of A that are related to x 
+    in R. This is based on the definition:
+        Let R be an equivalence relation on A; for all x∈A we define the (equivalence) class of x (according to R), denoted [X]s, or simply 
+        [X] if there is no risk of confusion, as the set of all elements of A that are equivalent to x; in symbols: [X]={y∈A|x∼y}.
     """
-    resultado = set()
+    result = set()
 
-    for elemento in A:
-        if (elemento, x) in R:
-            resultado.add(elemento)
+    for element in A:
+        if (x, element) in R:
+            result.add(element)
     
-    return resultado
+    return result
 
 def disjuntos_por_pares(A: set, B: set):
     """
