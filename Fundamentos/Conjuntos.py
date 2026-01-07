@@ -129,18 +129,21 @@ def power_set(A: set):
 
     return power_set
 
-def producto_cartesiano(A: set, B: set):
+def cartesian_product(A: set, B: set):
     """
-    The function `producto_cartesiano` takes two sets as input and returns the Cartesian product of the
-    two sets as a set of tuples.
+    The `cartesian_product` function takes two sets as input and returns the Cartesian product of the two sets as a set of tuples. 
+    This is based on the definition:
+        If A and B are arbitrary sets, we know that the Cartesian product of A and B is the set given by: 
+        AxB = {(x,y)|x∈A ∧ y∈B}, which is not commutative.
+        We therefore have that (x,y)∈AxB if and only if x∈A and y∈B.
     """
-    resultado = set()
+    result = set()
 
-    for elementoA in A:
-        for elementoB in B:
-            a = elementoA
-            b = elementoB
-            par_ordenado = (a,b)
-            resultado.add(par_ordenado)
+    for elementA in A:
+        for elementB in B:
+            a = elementA
+            b = elementB
+            orderly_pair = (a,b)
+            result.add(orderly_pair)
 
-    return resultado
+    return result
