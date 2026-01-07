@@ -52,14 +52,18 @@ def inverse(A: set, B: set):
     
     return result
 
-def inversa_relacion(R: set):
-    resultado = set()
+def inverse_relation(R: set):
+    """
+    The function `inverse_relation` takes a set representing a relation and returns its inverse
+    relation.
+    """
+    result = set()
 
     for a, b in R:
-        inversa = (b,a)
-        resultado.add(inversa)
+        inverse = (b,a)
+        result.add(inverse)
 
-    return resultado
+    return result
 
 def reflexiva(A: set, R: set):
     """
@@ -77,7 +81,7 @@ def simetrica(R: set):
     The function `simetrica` checks if two sets are equal and returns True if they are, otherwise
     returns False.
     """
-    Inversa = inversa_relacion(R)
+    Inversa = inverse_relation(R)
 
     if Inversa == R:
         return True
@@ -104,7 +108,7 @@ def antisimetrica(R: set, A: set):
     """
     The function checks if the intersection of two sets is contained within a third set.
     """
-    Inversa = inversa_relacion(R)
+    Inversa = inverse_relation(R)
     a = intersection(R, Inversa)
     Diagonal = diagonal(A)
 
