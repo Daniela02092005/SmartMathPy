@@ -1,4 +1,4 @@
-from Conjuntos import producto_cartesiano, contenido, interseccion
+from Conjuntos import cartesian_product, contained, intersection
 
 def diagonal(A: set):
     """
@@ -14,15 +14,17 @@ def diagonal(A: set):
 
     return result
 
-def compuesta(A: set, B: set, C: set):
+def composition(A: set, B: set, C: set):
     """
-    The function `compuesta` takes three sets A, B, and C, computes the Cartesian products of A and B,
-    and B and C, then finds pairs of elements where the second element of the first pair matches the
-    first element of the second pair, returning a set of resulting pairs.
+    The `composition` function takes three sets A, B, and C, calculates the Cartesian products of A and B, and B and C, and then finds pairs 
+    of elements where the second element of the first pair matches the first element of the second pair, returning a set of resulting pairs. 
+    This is based on:
+        S relation from A to B, T relation from B to C. We can form the composite of T with S, denoted ToS, and given by: 
+        ToS = {(w,x)∈AxC | (∃y∈B)((w,y)∈S ∧ (y,x)∈T)}.
     """
-    S = producto_cartesiano(A, B)
-    T = producto_cartesiano(B, C)
-    resultado = set()
+    S = cartesian_product(A, B)
+    T = cartesian_product(B, C)
+    result = set()
 
     for s in S:
         DomS = s[0]
@@ -31,17 +33,17 @@ def compuesta(A: set, B: set, C: set):
             DomT = t[0]
             RanT = t[1]
             if RanS == DomT:
-                par_ordenado = (DomS, RanT)
-                resultado.add(par_ordenado)
+                ordered_pair = (DomS, RanT)
+                result.add(ordered_pair)
     
-    return resultado
+    return result
 
 def inversa(A: set, B: set):
     """
     The function inversa takes two sets A and B, computes the Cartesian product of A and B, and returns
     a new set with the pairs reversed.
     """
-    original = producto_cartesiano(A, B)
+    original = cartesian_product(A, B)
     resultado = set()
 
     for par in original:
@@ -65,7 +67,7 @@ def reflexiva(A: set, R: set):
     """
     Diagonal = diagonal(A)
 
-    if contenido(Diagonal, R):
+    if contained(Diagonal, R):
         return True
     else:
         return False
@@ -93,7 +95,7 @@ def transitiva(R: set):
                 par_ordenado = (a, d)
                 Compuesta.add(par_ordenado)
 
-    if contenido(Compuesta, R):
+    if contained(Compuesta, R):
         return True
     else:
         return False
@@ -103,10 +105,10 @@ def antisimetrica(R: set, A: set):
     The function checks if the intersection of two sets is contained within a third set.
     """
     Inversa = inversa_relacion(R)
-    a = interseccion(R, Inversa)
+    a = intersection(R, Inversa)
     Diagonal = diagonal(A)
 
-    if contenido(a, Diagonal):
+    if contained(a, Diagonal):
         return True
     else:
         return False
@@ -137,7 +139,7 @@ def disjuntos_por_pares(A: set, B: set):
     """
     The function `disjuntos_por_pares` checks if two sets A and B are disjoint by pairs.
     """
-    i = interseccion(A, B)
+    i = intersection(A, B)
     if A !=B and i == set():
         return True
     else:
