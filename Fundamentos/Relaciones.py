@@ -161,14 +161,15 @@ def relation_of_order(R: set, A: set):
     
 def comparable(P: set, a, b):
     """
-    The function `comparable` determines whether two elements are comparable based on a given set of
-    pairs.
+    The `comparable` function determines whether two elements are comparable based on a given set of pairs. This is based on the definition:
+        Let (A, ≤) be a partially ordered set; we say that two elements a and b of A are comparable according to ≤ if a≤b or b≤a; otherwise, 
+        a and b are said to be incomparable according to ≤.
     """
         
     if (a, b) in P or (b, a) in P:
-        return "Comparables"
+        return "Comparable"
     else:
-        return "Incomparables"
+        return "Incomparable"
     
 def orden_total(P: set, A: set):
     """
