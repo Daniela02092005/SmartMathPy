@@ -107,12 +107,14 @@ def transitive(R: set):
     else:
         return False
     
-def antisimetrica(R: set, A: set):
+def antisymmetric(R: set, A: set):
     """
-    The function checks if the intersection of two sets is contained within a third set.
+    The `antisymmetric` function checks whether a relation R is antisymmetric given a set A. This is based on Theorem 41, clause d:
+        If R is a relation in A, then: R is antisymmetric if and only if R ∩ R^-1 ⊆ ∆A.
     """
-    Inversa = inverse_relation(R)
-    a = intersection(R, Inversa)
+    
+    Inverse = inverse_relation(R)
+    a = intersection(R, Inverse)
     Diagonal = diagonal(A)
 
     if contained(a, Diagonal):
@@ -156,7 +158,7 @@ def relacion_de_orden(R: set, A: set):
     """
     The function checks if a relation R on set A is reflexive, antisymmetric, and transitive.
     """
-    if reflexive(A, R) and antisimetrica(R, A) and transitive(R):
+    if reflexive(A, R) and antisymmetric(R, A) and transitive(R):
         return True
     else: 
         return False
