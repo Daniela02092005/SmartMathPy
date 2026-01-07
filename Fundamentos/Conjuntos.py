@@ -53,25 +53,18 @@ def set_difference(A: set, B: set):
     
     return result
 
-def diferencia_simetrica(A: set, B: set):
+def symmetric_difference(A: set, B: set):
     """
-    The function `diferencia_simetrica` calculates the symmetric difference between two sets A and B by
-    finding elements that are only in one of the sets.
+    The `symmetric_difference` function calculates the symmetric difference between two sets A and B by finding the elements that are only 
+    in one of the sets. This is based on the following definition:
+        If A and B are sets, their symmetric difference, denoted AΔB, is defined as follows: AΔB = (A-B) U (B-A).
     """
+    first_part = set_difference(A, B)
+    second_part = set_difference(B, A)
+    
+    result = union(first_part, second_part)
 
-    try:
-        primera_parte = set_difference(A, B)
-    except:
-        primera_parte = set() #Dado el caso de que se ejecute el error en la función diferencia_conjuntista
-
-    try:
-        segunda_parte = set_difference(B, A)
-    except:
-        segunda_parte = set() #Dado el caso que se ejecute el error en la funcion diferencia_conjuntista
-
-    resultado = union(primera_parte, segunda_parte)
-
-    return resultado
+    return result
 
 def contenido(A: set, B: set):
     """
