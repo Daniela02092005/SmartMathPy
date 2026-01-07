@@ -66,27 +66,27 @@ def symmetric_difference(A: set, B: set):
 
     return result
 
-def contenido(A: set, B: set):
+def contained(A: set, B: set):
     """
-    The function checks if all elements in set A are also present in set B and returns True if they are,
-    otherwise False.
+    The function checks whether all elements of set A are also present in set B and returns True if so, False otherwise. 
+    This is based on the definition:
+        If A and B are sets and every element of A is an element of B, we say that A is contained in B (or that A is a subset of B, or that B 
+        contains A, or that B is a superset of A) and we write A ⊆ B. A ⊆ B if and only if, for all x, if x ∈ A, then x ∈ B.
     """
-    resultado = True
+    result = True
 
-    for elemento in A:
-        if elemento in B:
-            resultado = True
-        else:
-            resultado = False
+    for element in A:
+        if element not in B:
+            result = False
             break
 
-    return resultado
+    return result
 
 def contenido_estrictamente(A: set, B: set):
     """
     The function `contenido_estrictamente` checks if set A is strictly contained in set B.
     """
-    resultado = contenido(A, B)
+    resultado = contained(A, B)
     if resultado == True and A != B:
         resultado = True
     else:
