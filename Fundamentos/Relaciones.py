@@ -38,19 +38,19 @@ def composition(A: set, B: set, C: set):
     
     return result
 
-def inversa(A: set, B: set):
+def inverse(A: set, B: set):
     """
-    The function inversa takes two sets A and B, computes the Cartesian product of A and B, and returns
+    The function inverse takes two sets A and B, computes the Cartesian product of A and B, and returns
     a new set with the pairs reversed.
     """
     original = cartesian_product(A, B)
-    resultado = set()
+    result = set()
 
-    for par in original:
-        nuevo_par = (par[1], par[0])
-        resultado.add(nuevo_par)
+    for pair in original:
+        new_pair = (pair[1], pair[0])
+        result.add(new_pair)
     
-    return resultado
+    return result
 
 def inversa_relacion(R: set):
     resultado = set()
