@@ -98,13 +98,14 @@ def strictly_contained(A: set, B: set):
 
     return result
 
-def complemento(R: set, A: set):
+def complement(R: set, A: set):
     """
-    The function `complemento` takes two sets `R` and `A`, and returns the set difference between `R`
-    and `A`.
+    The `complement` function takes two sets `R` and `A`, and returns the difference between `R` and `A`, based on the definition:
+        Suppose we have a reference set R and that A⊆R. The set R-A is called the complement of A with respect to R and is denoted Cr(A) or 
+        simply C(A), if there is no risk of confusion. We thus have that: x∈Cr(A) if and only if x∈R and x∉A.
     """
-    resultado = set_difference(R, A)
-    return resultado
+    result = set_difference(R, A)
+    return result
 
 def conjunto_de_partes(A: set):
     """
