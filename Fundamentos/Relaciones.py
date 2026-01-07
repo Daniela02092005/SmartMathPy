@@ -2,16 +2,17 @@ from Conjuntos import producto_cartesiano, contenido, interseccion
 
 def diagonal(A: set):
     """
-    The function `diagonal` takes a set as input and returns a set of tuples where each tuple contains
-    an element from the input set repeated twice.
+    The `diagonal` function takes a set as input and returns a set of tuples in which each tuple contains an element of the input set repeated
+    twice. This is based on:
+        Let A be any set. The diagonal relation in A, denoted ∆A, is given by: ∆A = {(x,x)|x∈A}.
     """
-    resultado = set()
+    result = set()
 
     for a in A:
-        par_ordenado = (a, a)
-        resultado.add(par_ordenado)
+        ordered_pair = (a, a)
+        result.add(ordered_pair)
 
-    return resultado
+    return result
 
 def compuesta(A: set, B: set, C: set):
     """
