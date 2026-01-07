@@ -147,9 +147,12 @@ def class_equivalence(R: set, A: set, x):
     
     return result
     
-def relacion_de_orden(R: set, A: set):
+def relation_of_order(R: set, A: set):
     """
-    The function checks if a relation R on set A is reflexive, antisymmetric, and transitive.
+    The relation_of_order function checks whether a relation R in set A is reflexive, antisymmetric, and transitive. This is based on the 
+    definition:
+        A relation of order is a binary relation on a set that simultaneously satisfies the properties of reflexivity, antisymmetry, 
+        and transitivity.
     """
     if reflexive(A, R) and antisymmetric(R, A) and transitive(R):
         return True
