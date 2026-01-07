@@ -1,18 +1,20 @@
 def union(A: set, B: set):
     """
-    The function `union` takes two sets as input and returns a new set containing all unique elements
-    from both input sets.
+    The “union” function takes two sets as input and returns a new set containing all the elements of both input sets. 
+    This is based on the definition:
+        Assuming that A and B are sets, the union of A and B, denoted by AUB, is defined as follows: AUB = { x | x∈A v x∈B}
+        Therefore, for all x, x∈AUB if and only if x∈A or x∈B.
     """
-    resultado = []
+    result = set()
 
-    for elemento in A:
-        resultado.append(elemento)
+    for element in A:
+        result.add(element)
     
-    for elemento in B:
-        if elemento not in resultado:
-            resultado.append(elemento)
+    for element in B:
+        if element not in result:
+            result.add(element)
 
-    return set(resultado)
+    return result
 
 
 def interseccion(A: set, B: set):
