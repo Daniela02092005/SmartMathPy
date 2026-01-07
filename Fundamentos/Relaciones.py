@@ -65,9 +65,10 @@ def inverse_relation(R: set):
 
     return result
 
-def reflexiva(A: set, R: set):
+def reflexive(A: set, R: set):
     """
-    The function checks if a relation R is reflexive based on the elements in the diagonal set.
+    The function checks whether a relation R is reflexive based on the elements of the diagonal set. This is based on  Theorem 41, clause a:
+        If R is a relation in A, then: R is reflexive if and only if ∆A ⊆ R.
     """
     Diagonal = diagonal(A)
 
@@ -121,7 +122,7 @@ def equivalencia(A: set, R: set):
     """
     The function checks if a relation R on set A is reflexive, symmetric, and transitive.
     """
-    if reflexiva(A, R) and simetrica(R) and transitiva(R):
+    if reflexive(A, R) and simetrica(R) and transitiva(R):
         return True
     else: 
         return False
@@ -153,7 +154,7 @@ def relacion_de_orden(R: set, A: set):
     """
     The function checks if a relation R on set A is reflexive, antisymmetric, and transitive.
     """
-    if reflexiva(A, R) and antisimetrica(R, A) and transitiva(R):
+    if reflexive(A, R) and antisimetrica(R, A) and transitiva(R):
         return True
     else: 
         return False
