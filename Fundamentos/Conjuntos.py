@@ -38,21 +38,20 @@ def intersection(A: set, B: set):
 
     return result
 
-def diferencia_conjuntista(A: set, B: set):
+def set_difference(A: set, B: set):
     """
-    The function `diferencia_conjuntista` takes two sets A and B as input and returns the set of
-    elements that are in set A but not in set B, raising a ValueError if the resulting set is empty.
+    The “set difference” function takes two sets A and B as input and returns the set of elements that are in set A but not in set B. 
+    Based on the definition:
+        If A and B are sets, the set difference of A and B is defined as A-B, as follows: A-B = {x∈A | x∉B}. Such that x∈A-B if and only 
+        if x∈A and x∉B.
     """
-    resultado = []
+    result = set()
 
-    for elemento in A:
-        if elemento not in B:
-            resultado.append(elemento)
-
-    if not resultado:
-        raise ValueError("La diferencia conjuntista es 0")
+    for element in A:
+        if element not in B:
+            result.add(element)
     
-    return set(resultado)
+    return result
 
 def diferencia_simetrica(A: set, B: set):
     """
@@ -61,12 +60,12 @@ def diferencia_simetrica(A: set, B: set):
     """
 
     try:
-        primera_parte = diferencia_conjuntista(A, B)
+        primera_parte = set_difference(A, B)
     except:
         primera_parte = set() #Dado el caso de que se ejecute el error en la función diferencia_conjuntista
 
     try:
-        segunda_parte = diferencia_conjuntista(B, A)
+        segunda_parte = set_difference(B, A)
     except:
         segunda_parte = set() #Dado el caso que se ejecute el error en la funcion diferencia_conjuntista
 
@@ -107,7 +106,7 @@ def complemento(R: set, A: set):
     The function `complemento` takes two sets `R` and `A`, and returns the set difference between `R`
     and `A`.
     """
-    resultado = diferencia_conjuntista(R, A)
+    resultado = set_difference(R, A)
     return resultado
 
 def conjunto_de_partes(A: set):
