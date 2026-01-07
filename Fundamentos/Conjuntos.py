@@ -17,22 +17,26 @@ def union(A: set, B: set):
     return result
 
 
-def interseccion(A: set, B: set):
+def intersection(A: set, B: set):
     """
-    The function `interseccion` takes two sets A and B as input and returns the intersection of elements
-    between the two sets, raising a ValueError if there are no common elements.
+    The `intersection` function takes two sets A and B as input and returns the intersection of elements between the two sets, generating a 
+    ValueError if there are no common elements, by design. This is based on the following definitions:
+        1. If A and B are sets, we define the intersection of A with B, denoted A∩B, as follows: A∩B = {x∈A | x∈B}. We then have that 
+        for all x, x∈A∩B if and only if x∈A and x∈B. 
+
+        2. Two sets A and B are called disjoint if they have no elements in common, that is, if their intersection is empty: A∩B=∅
     """
 
-    resultado = []
+    result = set()
 
-    for elemento in A:
-        if elemento in B:
-            resultado.append(elemento)
+    for element in A:
+        if element in B:
+            result.add(element)
 
-    if not resultado:
-        raise ValueError("A y B son disjuntos") #Disjuntos son los conjuntos que su intersección es el conjunto vacío
+    if not result:
+        raise ValueError("A and B are disjoint")
 
-    return set(resultado)
+    return result
 
 def diferencia_conjuntista(A: set, B: set):
     """
