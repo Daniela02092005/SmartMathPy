@@ -255,10 +255,15 @@ def bounds(P: set, A: set, B: set):
 
     return lower_bound, upper_bound
 
-def extremos(P: set,lower_bound: set, upper_bound: set):
+def extremes(P: set, lower_bound: set, upper_bound: set):
     """
-    The function `extremos` takes three sets as input (P, lower_bound, upper_bound) and returns two sets
-    containing elements that are the lower and upper bounds of P.
+    The `extremes` function takes three sets as input (P, lower_bound, upper_bound) and returns two sets containing elements that are the 
+    lower and upper bounds of P. Based on the definition:
+        Let (A, ≤) be a partially ordered set and B⊆A.
+        1. If the set of all lower bounds of B in A has a maximum, this maximum is called the lower extreme (or infimum, or simply inf) of B 
+        in A.
+        2. If the set of all upper bounds of B in A has a minimum, this minimum is called the upper extreme (or supremum, or simply sup) of 
+        B in A.
     """
     discard = set()
 
@@ -268,7 +273,7 @@ def extremos(P: set,lower_bound: set, upper_bound: set):
                 discard.add(m)
                 break
     
-    sup = set(upper_bound - discard)
+    sup = upper_bound - discard
     discard.clear()
 
     for n in lower_bound:
@@ -277,6 +282,6 @@ def extremos(P: set,lower_bound: set, upper_bound: set):
                 discard.add(n)
                 break
 
-    inf = set(lower_bound - discard)
+    inf = lower_bound - discard
 
     return inf, sup
