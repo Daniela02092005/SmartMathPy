@@ -192,8 +192,16 @@ def total_order(P: set, A: set):
 
 def minmax(P: set, A: set):
     """
-    The function minmax takes two sets P and A as input, and returns the minimal and maximal elements of
-    set A based on the relation defined in set P.
+    The minmax function takes two sets P and A as input and returns the minimum and maximum elements of set A based on the relation defined 
+    in set P. Starting from the definition:
+        Let (A, ≤) be a partially ordered set:
+        1. An element m∈A is a minimal element in A if, for all x∈A, having x≤m implies x=m (that is, m is a minimal element in A if m∈A and 
+        there are no elements in A that strictly precede m).
+        2. An element n∈A is maximal in A if, for all x∈A, having n≤x implies n=x (that is, n is maximal in A if n∈A and there are no 
+        elements in A that strictly follow n).
+
+        In this implementation, we restrict ourselves to total orders, so minimal and maximal elements coincide with minimum and maximum, 
+        respectively.
     """
     discard = set()
 
@@ -232,7 +240,7 @@ def cotas(P: set, A: set, B: set):
                 discard.add(a)
                 break
     
-    lower_bound = set(A - discard) #Cota inferior = lower bound
+    lower_bound = set(A - discard)
     discard.clear()
 
     for a in A:
