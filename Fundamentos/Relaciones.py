@@ -171,22 +171,24 @@ def comparable(P: set, a, b):
     else:
         return "Incomparable"
     
-def orden_total(P: set, A: set):
+def total_order(P: set, A: set):
     """
-    The function `orden_total` checks if a given set of pairs satisfies the total order property.
+    The `total_order` function checks whether a given set of pairs satisfies the total order property. This is based on the definition:
+        A partially ordered set (A, ≤) is called a total order (or linear order or chain) if there are no elements in A that are incomparable
+        according to ≤; in other words, if every pair of elements in A is comparable according to ≤.
     """
 
-    resultado = True
+    result = True
 
     for a in A:
         for b in A:
             if (a, b) in P or (b, a) in P:
                 continue
             else:
-                resultado = False
+                result = False
                 break
 
-    return resultado
+    return result
 
 def minmax(P: set, A: set):
     """
