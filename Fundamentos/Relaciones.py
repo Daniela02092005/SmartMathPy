@@ -224,10 +224,12 @@ def minmax(P: set, A: set):
     
     return minimal, maximal
 
-def cotas(P: set, A: set, B: set):
+def bounds(P: set, A: set, B: set):
     """
-    The function `cotas` calculates the lower and upper bounds of a set based on two other sets and a
-    given relation.
+    The `bounds` function calculates the lower and upper bounds of a set based on two other sets and a given relation. This is based on:
+        Let (A, ≤) be a partially ordered set and B⊆A.
+        1. A lower bound of B in A is an element a∈A such that a≤x, for all x∈B.
+        2. An upper bound of B in A is an element b∈A such that x≤b, for all x∈B.
     """
 
     discard = set()
