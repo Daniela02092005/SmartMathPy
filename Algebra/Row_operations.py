@@ -33,3 +33,34 @@ def multiply_by_a_scalar(matrix: list, row_index: int, scalar):
         return new_matrix
     else:
         raise ValueError("The scalar must be different to 0.")
+    
+def add_a_multiple(matrix: list, first_index: int, second_index: int, scalar):
+    """
+    This function takes a matrix, two indices, and a scalar, and returns a new matrix with the first row
+    modified by adding a multiple of the second row based on the scalar. This is based on the definition:
+        We will distinguish three types of operations between rows of a matrix, which we will call elementary row operations:
+        3. Add a multiple of one row to another. We will use the notation Ri+kRj to indicate that we will add row j of the matrix k times to 
+        row i.
+    """
+        
+    if first_index != second_index:
+
+        counter = 0
+        new_matrix = []
+        for row in matrix:
+            new_row = []
+            column_counter = 0
+            for element in row:
+                if counter == first_index:
+                    obj = element + (matrix[second_index][column_counter] * scalar)
+                    new_row.append(obj)
+                    column_counter += 1
+                else:
+                    new_row.append(element)
+                    column_counter += 1
+            new_matrix.append(new_row)
+            counter += 1
+
+        return new_matrix
+    else:
+        raise ValueError("First index must be different than second index.")
