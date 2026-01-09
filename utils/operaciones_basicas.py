@@ -1,4 +1,4 @@
-from convertir_valores import convertir_valores, convertir_a_fraccion
+from Convert_values import convert_values, convert_to_fraction
 
 '''
     Este módulo contiene implementaciones elementales de operaciones aritméticas utilizando técnicas imperativas básicas. 
@@ -12,8 +12,8 @@ def multiplicacion(a, b):
     return resultado
 
 def suma(a, b):
-    sumando1 = convertir_valores(a)
-    sumando2 = convertir_valores(b)
+    sumando1 = convert_values(a)
+    sumando2 = convert_values(b)
 
     if isinstance(sumando1, int) and isinstance(sumando2, int): #isinstance verifica que el objeto sea del timpo que se está preguntando
         auxiliar = []
@@ -25,8 +25,8 @@ def suma(a, b):
     
     else:
         if isinstance(sumando1, float) and isinstance(sumando2, float):
-            fraccion1 = convertir_a_fraccion(str(sumando1))
-            fraccion2 = convertir_a_fraccion(str(sumando2))
+            fraccion1 = convert_to_fraction(str(sumando1))
+            fraccion2 = convert_to_fraction(str(sumando2))
 
             numerador1, denominador1 = fraccion1
             numerador2, denominador2 = fraccion2
@@ -48,8 +48,8 @@ def suma(a, b):
                 return ab / c
 
 def resta(a, b):
-    minuendo = convertir_valores(a)
-    sustraendo = convertir_valores(b)
+    minuendo = convert_values(a)
+    sustraendo = convert_values(b)
 
     if isinstance(minuendo, int) and isinstance(sustraendo, int): 
         auxiliar = []
@@ -61,8 +61,8 @@ def resta(a, b):
     
     else:
         if isinstance(minuendo, float) and isinstance(sustraendo, float):
-            fraccion1 = convertir_a_fraccion(str(minuendo))
-            fraccion2 = convertir_a_fraccion(str(sustraendo))
+            fraccion1 = convert_to_fraction(str(minuendo))
+            fraccion2 = convert_to_fraction(str(sustraendo))
 
             numerador1, denominador1 = fraccion1
             numerador2, denominador2 = fraccion2

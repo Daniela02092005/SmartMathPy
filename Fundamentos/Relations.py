@@ -1,4 +1,4 @@
-from Conjuntos import cartesian_product, contained, intersection
+from Sets import cartesian_product, contained, intersection
 
 def diagonal(A: set):
     """

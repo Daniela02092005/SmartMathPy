@@ -1,4 +1,4 @@
-from utils import convertir_valores
+from utils import convert_values
     
 def evaluate_function(function: list, domains: list):
     """
@@ -17,7 +17,7 @@ def evaluate_function(function: list, domains: list):
             elif token in ["+", "-", "*", "**", "(", ")", "/"]:
                 new_function.append(token)
             else:
-                converted_function = convertir_valores(token)
+                converted_function = convert_values(token)
                 new_function.append(converted_function)
         print(f"Función reemplazando a por {element}: ",new_function)
 
