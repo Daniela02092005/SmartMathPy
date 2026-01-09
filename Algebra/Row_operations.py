@@ -10,6 +10,12 @@ def swap_rows(matrix: list, first_index: int, second_index: int):
     return matrix
 
 def multiply_by_a_scalar(matrix: list, row_index: int, scalar):
+    """
+    This function multiplies a specific row in a matrix by a scalar value. This is based on the definition:
+        We will distinguish three types of operations between rows of a matrix, which we will call elementary row operations:
+        2. Multiply one of its rows by a scalar k≠0. The symbol kRi is used to indicate that we will multiply each component of row i of the 
+        matrix by k. 
+    """
 
     if scalar != 0:
         new_matrix = []
