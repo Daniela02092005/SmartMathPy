@@ -19,4 +19,4 @@ def augmented_matrix(matrix_coefficients: list, vector: list):
             new_matrix.append(new_row)
             counter += 1
 
-        return new_matrix
+        raise new_matrix

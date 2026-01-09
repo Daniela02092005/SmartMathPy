@@ -8,3 +8,22 @@ def swap_rows(matrix: list, first_index: int, second_index: int):
 
     matrix[first_index], matrix[second_index] = matrix[second_index], matrix[first_index]
     return matrix
+
+def multiply_by_a_scalar(matrix: list, row_index: int, scalar):
+
+    if scalar != 0:
+        new_matrix = []
+        counter = 0
+        for row in matrix:
+            new_row = []
+            for element in row:
+                if counter == row_index:
+                    obj = element * scalar
+                    new_row.append(obj)
+                else:
+                    new_row.append(element)
+            new_matrix.append(new_row)
+            counter += 1
+        return new_matrix
+    else:
+        raise ValueError("The scalar must be different to 0.")
