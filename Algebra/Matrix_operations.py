@@ -61,3 +61,21 @@ def matrix_subtraction(matrix_A: list, matrix_B: list):
                 
     else:
         raise ValueError("The arrays must have the same number of rows and columns")
+    
+def scalar_multiply_matrix(matrix: list, scalar):
+    """
+    The scalar_multiply_matrix function multiplies each element of a matrix by a scalar value and returns the resulting matrix. This is based 
+    on the definition:
+        Suppose that A=[ai,j] is a matrix in Mmxn and c∈ℝ (a scalar). 
+        Then c*A is the matrix in Mmxn obtained by multiplying each component of A by c: c*A=[cai,j]
+    """
+    result = []
+
+    for row in matrix:
+        new_row = []
+        for element in row:
+            obj = element * scalar
+            new_row.append(obj)
+        result.append(new_row)
+
+    return result
