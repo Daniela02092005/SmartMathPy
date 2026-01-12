@@ -20,3 +20,28 @@ def augmented_matrix(matrix_coefficients: list, vector: list):
             counter += 1
 
         raise new_matrix
+    
+def diagonal(matrix: list):
+    """
+    The function checks if a given matrix is diagonal. This is based on the definition:
+        We say that A is diagonal if it is square and its off-diagonal components are zero.
+    """
+    rows = len(matrix)
+    columns = len(matrix[0])
+
+    diagonal = True
+
+    if rows == columns:
+        row_counter = 0
+        for row in matrix:
+            column_counter = 0
+            for element in row:
+                if row_counter != column_counter and element != 0:
+                    diagonal = False
+                    return diagonal
+                column_counter += 1
+            row_counter += 1
+    else:
+        diagonal = False
+
+    return diagonal
