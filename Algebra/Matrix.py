@@ -45,3 +45,31 @@ def diagonal(matrix: list):
         diagonal = False
 
     return diagonal
+
+def identity_matrix(matrix: list):
+    """
+    The function checks whether a given matrix is an identity matrix by verifying that it is diagonal and has 1 on the main diagonal and 0 
+    on the rest. This is based on the definition:
+        The identity matrix In is the diagonal matrix of size n whose main diagonal consists of 1's.
+    """
+    is_diagonal = diagonal(matrix)
+
+    if is_diagonal:
+        identity = True
+        row_counter = 0
+        for row in matrix:
+            column_counter = 0
+            for element in row:
+                if row_counter != column_counter and element != 0:
+                    identity = False
+                    return identity
+                else:
+                    if row_counter == column_counter and element != 1:
+                        identity = False
+                        return identity
+                column_counter += 1
+            row_counter += 1
+    else:
+        return False
+    
+    return identity
