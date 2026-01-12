@@ -66,7 +66,7 @@ def scalar_multiply_matrix(matrix: list, scalar):
     """
     The scalar_multiply_matrix function multiplies each element of a matrix by a scalar value and returns the resulting matrix. This is based 
     on the definition:
-        Suppose that A=[ai,j] is a matrix in Mmxn and c∈ℝ (a scalar). 
+        Suppose that A=[ai,j] is a matrix in Mmxn and c∈R (a scalar). 
         Then c*A is the matrix in Mmxn obtained by multiplying each component of A by c: c*A=[cai,j]
     """
     result = []
@@ -79,3 +79,28 @@ def scalar_multiply_matrix(matrix: list, scalar):
         result.append(new_row)
 
     return result
+
+def matrix_multiplication(A_matrix: list, B_matrix: list):
+    """
+    The function performs matrix multiplication between two matrices A and B, returning the result if the columns of A match the rows of B; 
+    otherwise, it generates a ValueError error. This is based on the definition:
+        Let A be an mxn matrix and B an nxp matrix. The entry ij of AB is calculated by multiplying row i of A by column j of B.
+        The entry ij of AB is given by:
+            (AB)ij = ai1b1j + ai2b2j+...+ainbnj; where 1,2,...,n = k and ABmxp.
+    """
+    A_columns = len(A_matrix[0])
+    B_rows = len(B_matrix)
+
+    rows = len(A_matrix)
+    columns = len(B_matrix[0])
+
+    result = [[0 for _ in range(columns)] for _ in range(rows)]
+
+    if A_columns == B_rows:
+        for i in range(rows):
+            for j in range(columns):
+                for k in range(A_columns):
+                    result[i][j] += A_matrix[i][k] * B_matrix[k][j]
+        return result
+    else:
+        raise ValueError("The columns of matrix A must match the rows of matrix B.")
