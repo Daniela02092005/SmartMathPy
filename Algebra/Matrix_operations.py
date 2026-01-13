@@ -141,5 +141,36 @@ def submatrix(matrix: list, i: int, j: int):
                 column_counter += 1
             submatrix.append(new_row)
         row_counter += 1
-        
+
     return submatrix
+
+def determinant(matrix: list):
+    """
+    The function calculates the determinant of a 2x2 or 3x3 matrix using Sarrus form on the second case.
+    """
+
+    if len(matrix) == 2:
+        
+        first_diagonal, second_diagonal = 0
+        first_diagonal = matrix[0][0] * matrix[1][1]
+        second_diagonal = matrix[0][1] * matrix[1][0]
+        result = first_diagonal - second_diagonal
+
+        return result
+    
+    elif len(matrix) == 3:
+        first_part, second_part, third_part, fourth_part, fifth_part, sixth_part = 0
+
+        first_part = matrix[0][0] * matrix[1][1] * matrix[2][2]
+        second_part = matrix[0][1] * matrix[1][2] * matrix[2][0]
+        third_part = matrix[0][2] * matrix[1][0] * matrix[2][1]
+        fourth_part = matrix[0][2] * matrix[1][1] * matrix[2][0]
+        fifth_part = matrix[0][0] * matrix[1][2] * matrix[2][1]
+        sixth_part = matrix[0][1] * matrix[1][0] * matrix[2][2]
+
+        result = first_part + second_part + third_part - fourth_part - fifth_part - sixth_part
+
+        return result
+
+    else:
+        raise ValueError("This algorith has limit on matrix 3x3.")
