@@ -174,3 +174,22 @@ def determinant(matrix: list):
 
     else:
         raise ValueError("This algorith has limit on matrix 3x3.")
+
+def minor(matrix: list, i: int, j: int):
+    """
+    The function calculates the minor of a specified element in a matrix by finding the determinant of a submatrix that excludes the row and 
+    column of the element. This is based on the following definition:
+        Let A be a square matrix of size n. The minor -(i,j) (Mij) is defined as the determinant of the submatrix obtained by deleting row i 
+        and column j from A.
+    """
+
+    sub_matrix = submatrix(matrix, i, j)
+
+    if len(sub_matrix) == 2 or len(sub_matrix) == 3:
+        
+        result = determinant(sub_matrix)
+
+        return result
+    
+    else:
+        raise ValueError("This algorith has limit on matrix 3x3.")
