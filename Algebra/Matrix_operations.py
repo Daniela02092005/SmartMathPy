@@ -193,3 +193,14 @@ def minor(matrix: list, i: int, j: int):
     
     else:
         raise ValueError("This algorith has limit on matrix 3x3.")
+    
+def cofactor(matrix: list, i: int, j: int):
+    """
+    The function calculates the cofactor of a specific element in a matrix. This is based on the following definition:
+        Let A be a square matrix of size n. The cofactor -(i,j) is defined as Cij=((-1) ^ (i+j)) Mij.
+    """
+    new_minor = minor(matrix, i, j)
+
+    result = ((-1) ** (i+j)) * new_minor
+
+    return result
