@@ -104,3 +104,21 @@ def matrix_multiplication(A_matrix: list, B_matrix: list):
         return result
     else:
         raise ValueError("The columns of matrix A must match the rows of matrix B.")
+
+def transposed_matrix(matrix: list):
+    """
+    The transposed_matrix function takes a matrix as input and returns its transpose. This is based on the definition:
+        Let Amxn be an mxn matrix. The transpose of A, denoted A^T, is the nxm matrix whose ij component is the ji component of A. That is, 
+        Aij = Aji.
+        In other words, A^T is obtained by swapping rows and columns of A.
+    """
+    rows = len(matrix)
+    columns = len(matrix[0])
+
+    result = [[0 for _ in range(rows)] for _ in range(columns)]
+
+    for i in range(rows):
+        for j in range(columns):
+            result[j][i] = matrix[i][j]
+    
+    return result
