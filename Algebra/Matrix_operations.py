@@ -122,3 +122,24 @@ def transposed_matrix(matrix: list):
             result[j][i] = matrix[i][j]
     
     return result
+
+def submatrix(matrix: list, i: int, j: int):
+    """
+    The function `submatrix` takes a matrix and two indices `i` and `j`, and returns a submatrix by
+    excluding the i-th row and j-th column. 
+    """
+    
+    submatrix = []
+    row_counter = 0
+    for row in matrix:
+        if row_counter != i:
+            new_row = []
+            column_counter = 0
+            for element in row:
+                if column_counter != j:
+                    new_row.append(element)
+                column_counter += 1
+            submatrix.append(new_row)
+        row_counter += 1
+        
+    return submatrix
