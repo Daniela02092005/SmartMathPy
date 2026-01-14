@@ -1,25 +1,22 @@
 # 📘 Álgebra
 
-En esta carpeta están los algoritmos de **álgebra** implementados en Python.  
-El objetivo es reforzar la lógica matemática con algoritmos de álgebra.  
+En esta carpeta están los algoritmos de **álgebra** implementados en Python de forma imperativa en base a las definiciones, axiomas y teoremas obtenidos del curso de álgebra lineal de la Universidad Nacional sede Manizales.
 
 ---
 
 ## 📑 Algoritmos 
 
-- [ ] Resolver ecuaciones de primer grado  
-- [ ] Resolver ecuaciones de segundo grado  
-- [ ] Operaciones con matrices (suma, multiplicación)  
-- [ ] Determinante de una matriz  
-- [ ] Inversa de una matriz  
-- [ ] Factorización de polinomios simples  
+- [ ] Operaciones de matrices
+- [ ] Tipos de matrices 
+- [ ] Operaciones entre filas
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivo del módulo
 
-Cada algoritmo debe:  
+1. Crear algoritmos matemáticos que evidencien la capacidad de convertir definiciones, axiomas y teoremas de álgebra en algoritmos.
 
-1. Usar conceptos de Python que voy aprendiendo.  
-2. Mostrar la lógica paso a paso.  
-3. Guardarse en un archivo `.py` dentro de esta carpeta.  
+## Fuentes matemáticas
+
+Departamento de Matemáticas y Estadística (DME). Playlist "Álgebra lineal"
+    Link: https://youtube.com/playlist?list=PLZ228TKfwQyDvD4pYDoYghR8Z8fG2d_Nf&si=9KE_MfGqy6TRdhwQ
