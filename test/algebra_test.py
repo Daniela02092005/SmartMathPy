@@ -8,7 +8,7 @@ def augmented_matrix_test():
 
     augmented = augmented_matrix(matrix, vector)
 
-    for row in matrix:
+    for row in augmented:
         for element in row:
             print(element, end=" ")
         print()
