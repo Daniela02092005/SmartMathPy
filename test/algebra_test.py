@@ -13,4 +13,17 @@ def augmented_matrix_test():
             print(element, end=" ")
         print()
 
+    # Fail case
+    matrix = [[1,2],
+              [3,4]]
+    
+    vector = [5,6,7]
+
+    augmented = augmented_matrix(matrix, vector)
+
+    for row in augmented:
+        for element in row:
+            print(element, end=" ")
+        print()
+
 augmented_matrix_test()
