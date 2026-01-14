@@ -204,3 +204,28 @@ def cofactor(matrix: list, i: int, j: int):
     result = ((-1) ** (i+j)) * new_minor
 
     return result
+
+def adjugate_matrix(matrix: list):
+    """
+    The `adjugate_matrix` function calculates the cofactor matrix of an input matrix and returns its transpose if the input matrix is square. This 
+    is based on the definition:
+        The adjoint (adj A) of a square matrix A is defined as the transposed cofactor matrix.
+    """
+    row_size = len(matrix)
+    column_size = len(matrix[0])
+
+    if row_size == column_size:
+        cofactor_matrix = []
+        for i in range(row_size):
+            new_row = []
+            for j in range(column_size):
+                current_cofactor = cofactor(matrix, i, j)
+                new_row.append(current_cofactor)
+            cofactor_matrix.append(new_row)
+        
+        result = transposed_matrix(cofactor_matrix)
+
+        return result
+
+    else:
+        raise ValueError("The matrix must be nxn.")
