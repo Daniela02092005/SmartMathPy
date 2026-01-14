@@ -7,7 +7,7 @@ def augmented_matrix(matrix_coefficients: list, vector: list):
     new_matrix = []
     
     if rows != len(vector):
-        return ValueError("insufficient independent terms")
+        raise ValueError("insufficient independent terms")
     else:
         counter = 0
         for row in matrix_coefficients:
@@ -19,7 +19,7 @@ def augmented_matrix(matrix_coefficients: list, vector: list):
             new_matrix.append(new_row)
             counter += 1
 
-        raise new_matrix
+        return new_matrix
     
 def diagonal(matrix: list):
     """
