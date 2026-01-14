@@ -229,3 +229,28 @@ def adjugate_matrix(matrix: list):
 
     else:
         raise ValueError("The matrix must be nxn.")
+    
+def inverse(matrix: list):
+    """
+    The function calculates the inverse of a square matrix. It is based on the following definition:
+        Let A be an nxn matrix. Then, its inverse matrix is given by: A^-1 = (1/|A|)adjA.
+        Note that the inverse exists if and only if |A| ≠ 0.
+    """
+
+    row_size = len(matrix)
+    column_size = len(matrix[0])
+
+    if row_size == column_size:
+        current_determinant = determinant(matrix)
+        if current_determinant != 0:
+            current_adjugate = adjugate_matrix(matrix)
+
+            scalar = (1 / current_determinant)
+            result = scalar_multiply_matrix(current_adjugate, scalar)
+
+            return result 
+        else:
+            raise ValueError("The inverse does not exist.")
+
+    else:
+        raise ValueError("The matrix must be nxn.")
