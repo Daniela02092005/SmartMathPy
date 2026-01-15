@@ -1,4 +1,4 @@
-from Algebra.Matrix_folder.Matrix import augmented_matrix, diagonal
+from Algebra.Matrix_folder.Matrix import augmented_matrix, diagonal, identity_matrix
 
 def augmented_matrix_test():
     matrix = [[1,2],
@@ -60,3 +60,24 @@ print("----------------------------------------------------------------")
 
 diagonal_test()
 
+def identity_test():
+    true_matrix = [[1,0,0],
+                   [0,1,0],
+                   [0,0,1]]
+    
+    result = identity_matrix(true_matrix)
+
+    print(result)
+
+    # False case
+    false_matrix = [[2,0,0],
+                    [0,3,0],
+                    [0,0,4]]
+    
+    result = identity_matrix(false_matrix)
+
+    print(result)
+
+print("----------------------------------------------------------------")
+
+identity_test()
