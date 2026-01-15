@@ -1,5 +1,9 @@
 from Algebra.Matrix_folder.Matrix import augmented_matrix, diagonal, identity_matrix
 
+# py -m test.Algebra_test.Matrix_test
+
+print("-----------augmented_matrix_test-------------")
+
 def augmented_matrix_test():
     matrix = [[1,2],
               [3,4]]
@@ -25,9 +29,9 @@ def augmented_matrix_test():
     except ValueError:
         print("augmented_matrix: error correctamente detectado")
 
-print("----------------------------------------------------------------")
-
 augmented_matrix_test()
+
+print("-----------diagonal_test-------------")
 
 def diagonal_test():
     true_matrix = [[1,0,0],
@@ -56,9 +60,9 @@ def diagonal_test():
 
     print(result)
 
-print("----------------------------------------------------------------")
-
 diagonal_test()
+
+print("-----------identity_test-------------")
 
 def identity_test():
     true_matrix = [[1,0,0],
@@ -78,6 +82,6 @@ def identity_test():
 
     print(result)
 
-print("----------------------------------------------------------------")
-
 identity_test()
+
+print("----------------------------------------------------------------")
