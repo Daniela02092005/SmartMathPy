@@ -1,4 +1,4 @@
-from Algebra.Matrix_folder.Matrix_operations import matrix_sum, matrix_subtraction, scalar_multiply_matrix, matrix_multiplication
+from Algebra.Matrix_folder.Matrix_operations import matrix_sum, matrix_subtraction, scalar_multiply_matrix, matrix_multiplication, adjugate_matrix
 
 # py -m test.Algebra_test.Matrix_operations_test
 
@@ -123,3 +123,19 @@ def matrix_multiplication_test():
         print("The columns of matrix A must match the rows of matrix B.")
 
 matrix_multiplication_test()
+
+print("-----------adjugate_test-------------")
+
+def adjugate_test():
+    A = [[1,2,3],
+         [0,1,4],
+         [5,6,0]]
+    
+    result = adjugate_matrix(A)
+
+    for row in result:
+        for element in row:
+            print(element, end=" ")
+        print()
+
+adjugate_test()    

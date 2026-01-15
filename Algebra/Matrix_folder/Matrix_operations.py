@@ -151,7 +151,7 @@ def determinant(matrix: list):
 
     if len(matrix) == 2:
         
-        first_diagonal, second_diagonal = 0
+        first_diagonal, second_diagonal = 0, 0
         first_diagonal = matrix[0][0] * matrix[1][1]
         second_diagonal = matrix[0][1] * matrix[1][0]
         result = first_diagonal - second_diagonal
